@@ -25,10 +25,6 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
     # Because this example is building a Gradle project, it needs to happen after setting up Java
-    - name: Grant execute permission for gradlew to build my project
-      run: chmod +x gradlew
-    - name: Build my project with Gradle
-      run: ./gradlew build
     - name: Run Synopsys Detect
       uses: synopsys-sig/detect-action@v0.3.0
       with:
