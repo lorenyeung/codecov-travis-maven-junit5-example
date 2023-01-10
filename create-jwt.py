@@ -18,7 +18,7 @@ payload = {
     # JWT expiration time (10 minutes maximum)
     'exp': int(time.time()) + 600,
     # GitHub App's identifier
-    'iss': 'loren-blackduck'
+    'iss': '278216'
 }
 
 # Create JWT
