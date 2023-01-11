@@ -4,11 +4,12 @@ import sys
 import requests
 import json
 # Get PEM file path
-if len(sys.argv) > 1:
+if len(sys.argv) > 2:
     pem = sys.argv[1]
+    iss = sys.argv[2] 
 else:
-    pem = input("Enter path of private PEM file: ")    
-
+    print("Pass in path to PEM and Github APP ID at runtime, separated by a space")
+    exit(1)
 # Open PEM
 with open(pem, 'r') as pem_file:
     signing_key = pem_file.read()
@@ -19,7 +20,7 @@ payload = {
     # JWT expiration time (10 minutes maximum)
     'exp': int(time.time()) + 600, 
     # GitHub App's identifier
-    'iss': '278216' 
+    'iss': iss 
 }
     
 # Create JWT
