@@ -8,7 +8,7 @@ if len(sys.argv) > 2:
     pem = sys.argv[1]
     iss = sys.argv[2] 
 else:
-    print("Pass in path to PEM and Github APP ID at runtime, separated by a space")
+    print("Pass in path to PEM and Github APP ID at runtime, separated by a space. i.e. `python3 create-jwt.py private.pem 123456`")
     exit(1)
 # Open PEM
 with open(pem, 'r') as pem_file:
